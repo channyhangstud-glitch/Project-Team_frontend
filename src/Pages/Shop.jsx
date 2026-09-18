@@ -50,8 +50,18 @@ function ProductCard({ product }) {
 
 function getSection(product) {
   const category = (product.catergories || '').toLowerCase();
-  if (category === 'shoes') return 'Shoes';
-  if (category === 'bags') return 'Bags';
+  const name = (product.name || '').toLowerCase();
+  if (
+    name.includes('small bag') ||
+    name.includes('white crocs') ||
+    name.includes('computer bag') ||
+    name.includes('dreamy bunny sandals')
+  ) {
+    return 'Clothing';
+  }
+  if (name.includes('chunky platform sneakers')) return 'Bags';
+  if (category.includes('shoe') || category.includes('footwear')) return 'Shoes';
+  if (category.includes('bag') || category.includes('backpack')) return 'Bags';
   return 'Clothing';
 }
 
@@ -107,7 +117,7 @@ export default function Shop() {
                   return (
                     <div key={section}>
                       <h2 className="text-2xl font-bold text-gray-800 mb-4">{section}</h2>
-                      <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-6">
+                      <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-6">
                         {items.map((product) => (
                           <ProductCard key={product.id} product={product} />
                         ))}

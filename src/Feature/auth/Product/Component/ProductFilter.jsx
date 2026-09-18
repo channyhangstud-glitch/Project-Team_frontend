@@ -1,8 +1,8 @@
 import { useProduct } from '../productContext';
 
 export default function ProductFilter() {
-  const { selectedCategory, filterByCategory, resetFilters } = useProduct();
-  const categories = ['All', 'Hoodies', 'Bottoms', 'Dresses', 'Shorts', 'Bags', 'T-Shirts', 'Blazers', 'Jackets', 'Shoes', "Women's Footwear", 'School Backpacks', "Women's Handbags"];
+  const { products, selectedCategory, filterByCategory, resetFilters } = useProduct();
+  const categories = ['All', ...new Set(products.map((p) => p.catergories))];
 
   return (
     <div className="bg-white rounded-2xl shadow-md p-6">

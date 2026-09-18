@@ -21,14 +21,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2">
-            <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 via-rose-400 to-purple-400 flex items-center justify-center text-white font-extrabold text-sm tracking-tight shadow-md ring-2 ring-pink-100">
-              NY
+            <div className="relative w-15 h-13  bg-gradient-to-br from-pink-400 via-rose-400 to-purple-400 flex items-center justify-center text-white font-extrabold text-shadow-mist-100 tracking-tight shadow-md ring-5 ring-pink-100">
+              <img src="https://i.pinimg.com/736x/a5/a1/50/a5a1506fcb20f5686e134e47fa209c45.jpg" alt="Logo" className="w-full h-full object-cover " />
               <svg className="absolute -top-1 -right-1 w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 0l2.2 6.9L21 9.6l-6.8 2.7L12 19l-2.2-6.7L3 9.6l6.8-2.7L12 0zm8 14l1 3.4 3.4 1-3.4 1-1 3.4-1-3.4-3.4-1 3.4-1 1-3.4z" />
               </svg>
             </div>
-            <span className="text-xl font-extrabold text-gray-800 tracking-tight">
-              NY<span className="text-pink-500">Sreyme</span> <span className="text-sm font-bold text-gray-500">Clothes Shop</span>
+            <span className="text-xl font-extrabold text-pink-600 tracking-tight">
+              N<span className="text-pink-500">S</span> <span className="text-shadow-mist-50 font-bold text-gray-500">fashion</span>
             </span>
           </Link>
 

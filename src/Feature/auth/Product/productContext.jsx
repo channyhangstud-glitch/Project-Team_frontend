@@ -40,7 +40,8 @@ export function ProductProvider({ children }) {
 
   const searchProducts = (query) => {
     setSearchQuery(query);
-    applyFilters(selectedCategory, query);
+    setSelectedCategory('All');
+    applyFilters('All', query);
   };
 
   const resetFilters = () => {

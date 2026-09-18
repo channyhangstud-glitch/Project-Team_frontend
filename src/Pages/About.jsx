@@ -36,9 +36,9 @@ export default function About() {
       {/* Hero Banner */}
       <section className="bg-gradient-to-r from-indigo-700 to-purple-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold">About StyleHub</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold">About NSFashion</h1>
           <p className="mt-4 text-indigo-200 text-lg max-w-2xl mx-auto">
-            Your trusted destination for quality Indian fashion
+            Your trusted destination for quality Khmer fashion
           </p>
         </div>
       </section>
@@ -49,10 +49,10 @@ export default function About() {
           <div>
             <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Story</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              StyleHub was born out of a passion for Indian fashion and a desire to make it accessible to everyone. We believe that every person deserves to look and feel their best, regardless of their budget.
+              NSFashion is a fashion brand inspired by the beauty, creativity, and cultural heritage of Cambodia.and modern fashion to create unique styles that help you express your identity with confidence.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              From handpicked ethnic wear to trendy western outfits, our curated collection reflects the diversity and vibrancy of Indian style. We work directly with local artisans and trusted brands to bring you authentic quality at honest prices.
+             From elegant Khmer-inspired designs to contemporary everyday looks, every piece is carefully selected to celebrate Khmer culture, timeless beauty, and modern 
             </p>
           </div>
           <div className="bg-gradient-to-br from-indigo-100 to-purple-100 rounded-3xl h-80 flex items-center justify-center">

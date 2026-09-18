@@ -4,7 +4,7 @@ import DashboardCard from '../components/DashboardCard';
 import OrderTable from '../components/OrderTable';
 
 export default function Dashboard() {
-  const { orders, stats } = useDashboard();
+  const { orders, stats, deleteOrder } = useDashboard();
   const recentOrders = orders.slice(-5).reverse();
 
   return (
@@ -22,7 +22,7 @@ export default function Dashboard() {
         <Link to="/dashboard/orders" className="text-indigo-600 font-medium hover:underline text-sm">View All</Link>
       </div>
       <div className="bg-white rounded-2xl shadow-md p-4">
-        <OrderTable orders={recentOrders} />
+        <OrderTable orders={recentOrders} onDelete={deleteOrder} />
       </div>
 
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">

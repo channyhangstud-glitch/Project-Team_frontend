@@ -64,7 +64,7 @@ export default function Home() {
             Welcome to <span className="text-yellow-300">Fashion Style 👕👗</span>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-indigo-100 max-w-2xl">
-            Discover the finest Indian fashion — ethnic wear, western styles, and everything in between.
+           Discover timeless Khmer elegance, beautifully reimagined for today.
           </p>
           <Link
             to="/shop"
@@ -134,7 +134,7 @@ export default function Home() {
               View All →
             </Link>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
             {bestSellerProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

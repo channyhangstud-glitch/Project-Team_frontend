@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">StyleHub</h3>
+            <h3 className="text-white font-bold text-lg mb-4">Feshion</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               Your trusted destination for quality Indian fashion. We bring you the best styles at honest prices.
             </p>
@@ -31,7 +31,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-gray-800 py-4 text-center text-sm text-gray-500">
-        &copy; {new Date().getFullYear()} StyleHub. All rights reserved.
+        &copy; {new Date().getFullYear()} Feshion. All rights reserved.
       </div>
     </footer>
   );

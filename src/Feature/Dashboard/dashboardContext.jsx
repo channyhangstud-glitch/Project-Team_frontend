@@ -91,6 +91,10 @@ export function DashboardProvider({ children }) {
     setOrders((prev) => [...prev, order]);
   };
 
+  const deleteOrder = (orderId) => {
+    setOrders((prev) => prev.filter((order) => order.id !== orderId));
+  };
+
   return (
     <DashboardContext.Provider
       value={{
@@ -98,6 +102,7 @@ export function DashboardProvider({ children }) {
         stats,
         updateOrderStatus,
         addOrder,
+        deleteOrder,
       }}
     >
       {children}

@@ -1,4 +1,6 @@
-export default function OrderTable({ orders }) {
+import Button from '../../../components/common/Button';
+
+export default function OrderTable({ orders, onDelete }) {
   if (!orders || orders.length === 0) {
     return <p className="text-gray-500 text-center py-8">No orders found.</p>;
   }
@@ -9,7 +11,7 @@ export default function OrderTable({ orders }) {
     Shipped: 'bg-purple-100 text-purple-700',
     Delivered: 'bg-green-100 text-green-700',
     Cancelled: 'bg-red-100 text-red-700',
-  };
+};
 
   return (
     <div className="overflow-x-auto">
@@ -22,6 +24,7 @@ export default function OrderTable({ orders }) {
             <th className="py-3 px-4 font-medium">Total</th>
             <th className="py-3 px-4 font-medium">Status</th>
             <th className="py-3 px-4 font-medium">Date</th>
+            <th className="py-3 px-4 font-medium">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -33,6 +36,19 @@ export default function OrderTable({ orders }) {
               <td className="py-3 px-4 font-semibold">${order.total.toLocaleString('en-IN')}</td>
               <td className="py-3 px-4"><span className={`px-2 py-1 rounded-full text-xs font-semibold ${statusColors[order.status] || 'bg-gray-100 text-gray-700'}`}>{order.status}</span></td>
               <td className="py-3 px-4 text-gray-500">{order.date}</td>
+              <td className="py-3 px-4">
+                <Button
+                  variant="danger"
+                  size="sm"
+                  onClick={() => {
+                    if (window.confirm(`Delete order ${order.id}?`)) {
+                      onDelete?.(order.id);
+                    }
+                  }}
+                >
+                  Delete
+                </Button>
+              </td>
             </tr>
           ))}
         </tbody>
